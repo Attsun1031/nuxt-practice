@@ -19,6 +19,7 @@
           target="_blank"
           class="button--grey">GitHub</a>
       </div>
+      <timeline></timeline>
     </div>
   </section>
 </template>
@@ -26,11 +27,13 @@
 <script>
   import AppLogo from '~/components/AppLogo.vue'
   import Counter from '~/components/Counter.vue'
+  import Timeline from '~/components/Timeline.vue'
 
   export default {
     components: {
       AppLogo,
-      Counter
+      Counter,
+      Timeline
     }
   }
 </script>
