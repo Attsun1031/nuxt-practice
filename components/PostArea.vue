@@ -27,7 +27,7 @@
         this.body = ''
         this.processing = false
       },
-      ...mapActions([
+      ...mapActions('post', [
         'addPost'
       ])
     }

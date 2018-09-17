@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>{{ counter }}</div>
-    <button @click="$store.commit('increment')">increment</button>
+    <button @click="$store.commit('cnt/increment')">increment</button>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 
   export default {
     computed: {
-      ...mapState([
+      ...mapState('cnt', [
         'counter'
       ])
     }

@@ -1,6 +1,6 @@
 <template>
   <div class="timeline">
-    <p>post length: <i>{{ posts.length}}</i></p>
+    <p>post length: <i>{{ counter }}</i></p>
     <post-area></post-area>
     <ul class="posts">
       <transition-group name="post">
@@ -21,8 +21,9 @@
       PostArea
     },
     computed: {
-      ...mapState([
-        'posts'
+      ...mapState('post', [
+        'posts',
+        'counter'
       ])
     }
   }
