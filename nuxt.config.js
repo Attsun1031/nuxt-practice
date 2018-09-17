@@ -4,6 +4,7 @@ module.exports = {
       'vuex'
     ]
   },
+  mode: 'spa',
   /*
   ** Headers of the page
   */

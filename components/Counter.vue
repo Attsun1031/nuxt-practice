@@ -1,18 +1,20 @@
 <template>
   <div>
-    <div>{{ count }}</div>
+    <div>{{ counter }}</div>
     <button @click="$store.commit('increment')">increment</button>
   </div>
 </template>
 
 <script>
-    export default {
-      computed: {
-        count() {
-          return this.$store.state.counter
-        }
-      }
+  import {mapState} from 'vuex'
+
+  export default {
+    computed: {
+      ...mapState([
+        'counter'
+      ])
     }
+  }
 </script>
 
 <style scoped>
