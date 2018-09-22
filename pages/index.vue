@@ -3,6 +3,7 @@
     <div>
       <app-logo/>
       <counter/>
+      <user></user>
       <h1 class="title">
         nuxt-practice
       </h1>
@@ -28,12 +29,17 @@
   import AppLogo from '~/components/AppLogo.vue'
   import Counter from '~/components/Counter.vue'
   import Timeline from '~/components/Timeline.vue'
+  import User from '~/components/User.vue'
 
   export default {
     components: {
       AppLogo,
       Counter,
-      Timeline
+      Timeline,
+      User
+    },
+    async mounted() {
+      await this.$store.dispatch('user/initUsers')
     }
   }
 </script>
